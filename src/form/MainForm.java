@@ -3,6 +3,7 @@ package form;
 
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import panel.AuthenticationPanel;
 
 public class MainForm extends javax.swing.JFrame {
 
@@ -14,7 +15,7 @@ public class MainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        authenticationPanel1 = new panel.AuthenticationPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuLoginLogout = new javax.swing.JMenu();
         jMenuLoginLogoutLogin = new javax.swing.JMenuItem();
@@ -23,17 +24,6 @@ public class MainForm extends javax.swing.JFrame {
         jMenuAdministrationUsers = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 371, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         jMenuLoginLogout.setText("LogIn / LogOut");
 
@@ -59,16 +49,16 @@ public class MainForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(authenticationPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(126, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(authenticationPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -76,13 +66,13 @@ public class MainForm extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private panel.AuthenticationPanel authenticationPanel1;
     private javax.swing.JMenu jMenuAdministration;
     private javax.swing.JMenuItem jMenuAdministrationUsers;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuLoginLogout;
     private javax.swing.JMenuItem jMenuLoginLogoutLogin;
     private javax.swing.JMenuItem jMenuLoginLogoutLogout;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
     public JMenuItem getjMenuAdministrationUsers() {
@@ -97,11 +87,9 @@ public class MainForm extends javax.swing.JFrame {
         return jMenuLoginLogoutLogout;
     }
 
-    public JPanel getjPanel1() {
-        return jPanel1;
+    public AuthenticationPanel getAuthenticationPanel1() {
+        return authenticationPanel1;
     }
-
-  
 
 
 }

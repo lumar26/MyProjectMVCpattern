@@ -33,7 +33,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="panel.AutenticationPanel" name="autenticationPanel1">
+    <Component class="panel.AuthenticationPanel" name="autenticationPanel1">
     </Component>
   </SubComponents>
 </Form>

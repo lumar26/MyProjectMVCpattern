@@ -4,11 +4,10 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class AutenticationPanel extends javax.swing.JPanel {
+public class AuthenticationPanel extends javax.swing.JPanel {
 
-    public AutenticationPanel() {
+    public AuthenticationPanel() {
         initComponents();
-        setVisible(true);
     }
 
    

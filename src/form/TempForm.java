@@ -27,7 +27,7 @@ public class TempForm extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        autenticationPanel1 = new panel.AutenticationPanel();
+        autenticationPanel1 = new panel.AuthenticationPanel();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -48,6 +48,6 @@ public class TempForm extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private panel.AutenticationPanel autenticationPanel1;
+    private panel.AuthenticationPanel autenticationPanel1;
     // End of variables declaration//GEN-END:variables
 }
