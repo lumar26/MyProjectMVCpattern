@@ -3,6 +3,7 @@ package model;
 import form.MainForm;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.DefaultListModel;
 import panel.AuthenticationPanel;
 import user.User;
 
@@ -12,9 +13,9 @@ public class Model {
     AuthenticationPanel aPanel;
     MainForm mainForm;
 
-    public Model(User[] users, AuthenticationPanel aPanel, MainForm mainForm) {
+    public Model(User[] users, MainForm mainForm) {
         this.users = users;
-        this.aPanel = aPanel;
+        this.aPanel = mainForm.getAuthenticationPanel1();
         this.mainForm = mainForm;
     }
 
@@ -26,7 +27,6 @@ public class Model {
         this.users = users;
         this.aPanel = aPanel;
     }
-    
 
     public void handleEvents() {
         //ovde ce mozda da treba pristup preko forme a ne direktno preko panela
@@ -56,13 +56,33 @@ public class Model {
     //   dovrsi  /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
     private void enterFullForm() {
-        this.mainForm.getjMenuAdministrationUsers().setEnabled(true);
-        this.mainForm.getjMenuLoginLogoutLogout().setEnabled(true);
-        this.mainForm.getjMenuLoginLogoutLogin().setEnabled(false);
-        this.mainForm.getAuthenticationPanel1().setVisible(false);
+        mainForm.getjMenuAdministrationUsers().setEnabled(true);
+        mainForm.getjMenuLoginLogoutLogout().setEnabled(true);
+        mainForm.getjMenuLoginLogoutLogin().setEnabled(false);
+        mainForm.getAuthenticationPanel1().setVisible(false);
     }
 
     private void fillFormAgain() {
         aPanel.getjLblError().setText("Error: invalid username or password");
     }
+
+    public void logout() {
+        mainForm.getjMenuAdministrationUsers().setEnabled(false);
+        mainForm.getjMenuLoginLogoutLogout().setEnabled(false);
+        mainForm.getjMenuLoginLogoutLogin().setEnabled(true);
+        mainForm.getAuthenticationPanel1().setVisible(false);
+    }
+
+    public void showUsers() {
+        this.mainForm.getjListUsers().setVisible(true);
+        DefaultListModel usersList = new DefaultListModel();
+        this.mainForm.getjListUsers().setModel(usersList);
+        for (User user : users) {
+            usersList.addElement(user.getUsername());
+        }
+        
+        
+    }
+
+
 }
